@@ -12,22 +12,11 @@ function checkFadeIn() {
   });
 }
 
-function checkSlideInLeft() {
-  const slideInLeftElements = document.querySelectorAll('.slide-in-left');
 
-  slideInLeftElements.forEach(element => {
-    const elementTop = element.getBoundingClientRect().top;
-    const windowHeight = window.innerHeight;
-
-    if (elementTop < windowHeight) {
-      element.classList.add('visible');
-    }
-  });
-}
 
 function handleScroll() {
   checkFadeIn();
-  checkSlideInLeft();
+  
 }
 
 window.addEventListener('scroll', handleScroll);
