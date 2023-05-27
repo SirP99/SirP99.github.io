@@ -145,8 +145,6 @@ footer {
   transform: translateY(0);
 }
 
-
-
 .section-title {
   position: relative;
   margin-bottom: 40px;
@@ -247,6 +245,10 @@ section#home {
   nav ul {
     text-align: center;
   }
+  nav ul li {
+    display: block;
+    margin-bottom: 10px;
+  }
 
   section h1,
   section h2 {
@@ -268,7 +270,14 @@ section#home {
   #home p {
     font-size: 12px;
   }
+  nav ul {
+    text-align: center;
+  }
 
+  nav ul li {
+    display: block;
+    margin-bottom: 10px;
+  }
 
   footer {
     font-size: 12px;
