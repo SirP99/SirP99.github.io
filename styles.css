@@ -43,6 +43,14 @@ header {
     display: block;
     margin-bottom: 10px;
   }
+  #home h1 {
+    font-size: 24px;
+  }
+
+  #home p {
+    font-size: 14px;
+  }
+
 }
 
 @keyframes rotate {
@@ -239,6 +247,19 @@ section#home {
   section p {
     font-size: 14px;
   }
+  #home {
+    padding: 20px;
+  }
+
+  #home h1 {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+
+  #home p {
+    font-size: 12px;
+  }
+
 
   footer {
     font-size: 12px;
