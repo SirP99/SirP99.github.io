@@ -26,6 +26,21 @@ header {
   margin-left: -50px;
 }
 
+@media (max-width: 768px) {
+  header {
+    padding: 10px;
+  }
+
+  .logo img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .content {
+    margin: 20px;
+  }
+}
+
 @keyframes rotate {
   from {
     transform: rotate(0deg);
@@ -64,9 +79,28 @@ h1, h2, h3 {
 }
 
 .project {
+  display: flex;
+  align-items: center;
   margin-bottom: 20px;
 }
 
+.project img {
+  width: 150px;
+  height: 150px;
+  margin-right: 20px;
+}
+
+.project-info {
+  flex-grow: 1;
+}
+
+.project-info h3 {
+  margin: 0;
+}
+
+.project-info p {
+  margin-top: 10px;
+}
 footer {
   background-color: #333;
   color: #fff;
