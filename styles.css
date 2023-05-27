@@ -39,6 +39,10 @@ header {
   .content {
     margin: 20px;
   }
+  nav ul li {
+    display: block;
+    margin-bottom: 10px;
+  }
 }
 
 @keyframes rotate {
@@ -112,7 +116,7 @@ footer {
   margin: 0 auto;
 }
 
-/* Cool design styles */
+
 .fade-in {
   opacity: 0;
   transform: translateY(20px);
@@ -211,4 +215,32 @@ section#home {
   width: 200px;
   height: auto;
   border-radius: 50%;
+}
+
+@media (max-width: 480px) {
+  .logo img {
+    width: 40px;
+    height: 40px;
+  }
+
+  header {
+    padding: 10px;
+  }
+
+  nav ul {
+    text-align: center;
+  }
+
+  section h1,
+  section h2 {
+    font-size: 24px;
+  }
+
+  section p {
+    font-size: 14px;
+  }
+
+  footer {
+    font-size: 12px;
+  }
 }
