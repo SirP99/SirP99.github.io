@@ -26,6 +26,63 @@ header {
   margin-left: -35px;
 }
 
+@media (max-width: 480px) {
+  .logo img {
+    width: 40px;
+    height: 40px;
+  }
+
+  header {
+    padding: 10px;
+    
+  }
+
+  nav ul {
+    text-align: center;
+  }
+  nav ul li {
+    display: block;
+    margin-bottom: 10px;
+  }
+  nav ul li a {
+    font-size: 12px;
+  }
+
+  section h1,
+  section h2 {
+    font-size: 24px;
+  }
+
+  section p {
+    font-size: 14px;
+  }
+  #home {
+    padding: 20px;
+  }
+
+  #home h1 {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+
+  #home p {
+    font-size: 12px;
+  }
+  nav ul {
+    text-align: center;
+  }
+
+  nav ul li {
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  footer {
+    font-size: 12px;
+    
+  }
+}
+
 @media (max-width: 768px) {
   header {
     padding: 5px;
@@ -78,13 +135,18 @@ header {
   animation: rotate 4s linear infinite;
   margin-left: 50px;
 }
+nav {
+  text-align: center;
+}
 nav ul {
   list-style-type: none;
-  display: flex;
+  padding: 0;
+  margin: 0;
 }
 
 nav ul li {
-  margin-right: 20px;
+  display: inline-block;
+  margin-right: 10px;
 }
 
 nav ul li a {
@@ -227,59 +289,3 @@ section#home {
 }
 
 
-@media (max-width: 480px) {
-  .logo img {
-    width: 40px;
-    height: 40px;
-  }
-
-  header {
-    padding: 5px;
-    
-  }
-
-  nav ul {
-    text-align: center;
-  }
-  nav ul li {
-    display: block;
-    margin-bottom: 10px;
-  }
-  nav ul li a {
-    font-size: 12px;
-  }
-
-  section h1,
-  section h2 {
-    font-size: 24px;
-  }
-
-  section p {
-    font-size: 14px;
-  }
-  #home {
-    padding: 20px;
-  }
-
-  #home h1 {
-    font-size: 20px;
-    margin-bottom: 10px;
-  }
-
-  #home p {
-    font-size: 12px;
-  }
-  nav ul {
-    text-align: center;
-  }
-
-  nav ul li {
-    display: block;
-    margin-bottom: 10px;
-  }
-
-  footer {
-    font-size: 12px;
-    
-  }
-}
