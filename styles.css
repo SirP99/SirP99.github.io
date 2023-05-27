@@ -76,6 +76,9 @@ header {
     display: block;
     margin-bottom: 10px;
   }
+  .portrait {
+    max-width: 100%;
+  }
 
   footer {
     font-size: 12px;
@@ -115,6 +118,11 @@ header {
 
   #home p {
     font-size: 14px;
+  }
+  .portrait {
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
   }
 
 }
