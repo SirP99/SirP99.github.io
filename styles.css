@@ -191,11 +191,11 @@ section#home {
 
 .home-content {
   flex: 1;
-  padding-right: 50px;
+  /*padding-right: 50px;*/
 }
 
 .portrait img {
-  width: 200px;
+  width: 150px;
   height: auto;
   border-radius: 50%;
 }
@@ -226,11 +226,6 @@ section#home {
   font-size: 24px;
 }
 
-.portrait img {
-  width: 200px;
-  height: auto;
-  border-radius: 50%;
-}
 
 @media (max-width: 480px) {
   .logo img {
@@ -240,7 +235,7 @@ section#home {
 
   header {
     padding: 10px;
-    margin-left: 0px;
+    
   }
 
   nav ul {
@@ -285,6 +280,6 @@ section#home {
 
   footer {
     font-size: 12px;
-    margin-left: 0px;
+    
   }
 }
