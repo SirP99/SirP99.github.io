@@ -1,4 +1,3 @@
-// JavaScript code for effects
 function checkFadeIn() {
   const fadeInElements = document.querySelectorAll('.fade-in');
 
