@@ -6,6 +6,7 @@
   <title>Ördög Viktor Roland honlapja</title>
   <link rel="icon" type="image/x-icon" href="icon.png">
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
   <header>
@@ -28,6 +29,8 @@
     </div>
     <div class="portrait">
         <img src="portre.jpg" alt="My Photo">
+        <p class="portrait-name">Ördög Viktor Roland</p>
+        <p class="ed_title">okleveles mechatronikai mérnök</p>
     </div>
   </section>
 
@@ -108,6 +111,7 @@
 
   <section id="contact">
     <h2 class="fade-in">Kapcsolat</h2>
+
     <form id="fs-frm" name="simple-contact-form" accept-charset="utf-8" action="https://formspree.io/f/xzbqqevd" method="post">
         <fieldset id="fs-frm-inputs">
             <label for="full-name">Teljes név</label>
@@ -117,9 +121,15 @@
             <label for="message">Üzenet</label>
             <textarea rows="5" name="message" id="message" placeholder="Az üzeneted" required=""></textarea>
             <input type="hidden" name="_subject" id="email-subject" value="Contact Form Submission">
+            <input type="submit" value="Elküld">
           </fieldset>
-          <input type="submit" value="Submit">
       </form>
+
+      <div class="extra_connect">
+        <a href="https://www.linkedin.com/in/viktor-roland-%C3%B6rd%C3%B6g-7a906a277/" class="nyomogomb" target="_blank">
+        <i class="fa fa-linkedin-square"></i> LinkedIn
+        </a>
+      </div>
   </section>
 
   <footer>

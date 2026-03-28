@@ -135,12 +135,28 @@ h1, h2, h3 {
   font-size: 24px;
 }
 
+/* MÓDOSÍTOTT PORTRAIT KONTÉNER STÍLUS */
+.portrait {
+  display: flex;
+  flex-direction: column; /* Egymás alá teszi a képet és a nevet */
+  align-items: center;    /* Vízszintesen középre igazítja őket */
+}
+
+/* MÓDOSÍTOTT PORTRAIT KÉP STÍLUS */
 .portrait img {
   width: 150px;
   height: auto;
   border-radius: 50%;
+  margin-bottom: 15px; /* Távolság a kép és a név között */
 }
 
+/* ÚJ STÍLUS A NÉVHEZ */
+.portrait-name {
+  font-size: 20px;
+  font-weight: bold;
+  color: #fff;
+  text-align: center; /* Ha mobil nézetben a kép középre kerül, a név is középen maradjon */
+}
 /* PROJEKTEK */
 .project {
   display: flex;
@@ -170,6 +186,22 @@ footer {
   display: flex;
   flex-direction: column;
   gap: 10px;
+}
+
+.extra_connect {
+  text-align: center; /* Középre igazítja a gombot */
+  margin-top: 30px;   /* Távolság a form aljától */
+  padding-bottom: 20px;
+}
+
+
+a.nyomogomb {
+    padding: 1px 6px;
+    border: 1px outset buttonborder;
+    border-radius: 3px;
+    color: white;
+    background-color: #0a66c2;
+    text-decoration: none;
 }
 
 /* =========================================
