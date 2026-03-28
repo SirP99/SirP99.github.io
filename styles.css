@@ -297,4 +297,35 @@ section#home {
   font-size: 24px;
 }
 
+header {
+  background-color: #212121;
+  color: #fff;
+  padding: 20px 0; /* Fent-lent 20px, oldalt 0 */
+  display: flex;
+  justify-content: center; /* Ez teszi középre a tartalmát (a nav-ot) */
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%; 
+  z-index: 9999;
+  /* TÖRÖLTEM: margin-left: -35px; -> Ez eltolta a menüt balra */
+  box-sizing: border-box; /* Biztosítja, hogy a padding ne növelje a szélességet */
+}
 
+nav {
+  /* Itt nem kell külön pozicionálás, a header flexboxa kezeli */
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex; /* Egymás mellé teszi a menüpontokat */
+  gap: 20px; /* Egyenlő távolság a menüpontok között */
+}
+
+nav ul li {
+  display: inline-block;
+  margin-right: 0; /* A gap-et használjuk helyette a pontosságért */
+}
