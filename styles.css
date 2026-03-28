@@ -1,6 +1,10 @@
-body, h1, h2, h3, p, ul, li {
+/* =========================================
+   1. ALAPBEÁLLÍTÁSOK (Reset & Base)
+   ========================================= */
+* {
   margin: 0;
   padding: 0;
+  box-sizing: border-box; /* Megakadályozza a szélesség-túllógást a padding miatt */
 }
 
 body {
@@ -8,202 +12,16 @@ body {
   background-color: #212121;
   color: #fff;
   line-height: 1.6;
+  overflow-x: hidden; /* Vízszintes csúszka ellen */
 }
 
-header {
-  background-color: #212121;
-  color: #fff;
-  padding: 20px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%; 
-  z-index: 9999;
-  margin-left: -35px;
-  
-}
-
-@media (max-width: 480px) {
-  .logo img {
-    width: 40px;
-    height: 40px;
-  }
-
-  header {
-    padding: 20px;
-    background-color: #212121;
-  }
-
-  nav ul {
-    text-align: center;
-  }
-  nav ul li {
-    display: block;
-    margin-bottom: 10px;
-  }
-  nav ul li a {
-    font-size: 12px;
-  }
-
-  section h1,
-  section h2 {
-    font-size: 24px;
-  }
-
-  section p {
-    font-size: 14px;
-  }
-  #home {
-    padding: 20px;
-  }
-
-  #home h1 {
-    font-size: 20px;
-    margin-bottom: 10px;
-  }
-
-  #home p {
-    font-size: 12px;
-  }
-  nav ul {
-    text-align: center;
-  }
-
-  nav ul li {
-    display: block;
-    margin-bottom: 10px;
-  }
-  .portrait {
-    max-width: 100%;
-  }
-
-  footer {
-    font-size: 12px;
-    
-  }
-}
-
-@media (max-width: 768px) {
-  header {
-    padding: 20px;
-    background-color: #212121;
-  }
-
-  .logo img {
-    width: 60px;
-    height: 60px;
-  }
-
-  .content {
-    margin: 20px;
-  }
-  nav ul li {
-    display: block;
-    margin-bottom: 10px;
-  }
-  #home {
-    padding: 20px;
-  }
-
-  #home h1 {
-    font-size: 20px;
-    margin-bottom: 10px;
-  }
-
-  #home p {
-    font-size: 12px;
-  }
-
-  #home p {
-    font-size: 14px;
-  }
-  .portrait {
-    width: 100%;
-    max-width: 300px;
-    margin: 0 auto;
-  }
-
-}
-
+/* =========================================
+   2. ANIMÁCIÓK & KÖZÖS OSZTÁLYOK
+   ========================================= */
 @keyframes rotate {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
 }
-
-.logo img {
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  animation: rotate 4s linear infinite;
-  margin-left: 50px;
-}
-nav {
-  text-align: center;
-}
-nav ul {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-}
-
-nav ul li {
-  display: inline-block;
-  margin-right: 10px;
-}
-
-nav ul li a {
-  color: #fff;
-  text-decoration: none;
-}
-section {
-  padding: 50px;
-}
-
-h1, h2, h3 {
-  margin-bottom: 20px;
-}
-
-.project {
-  display: flex;
-  align-items: center;
-  margin-bottom: 20px;
-}
-
-.project img {
-  width: 150px;
-  height: 150px;
-  margin-right: 20px;
-}
-
-.project-info {
-  flex-grow: 1;
-}
-
-.project-info h3 {
-  margin: 0;
-}
-
-.project-info p {
-  margin-top: 10px;
-}
-footer {
-  background-color: #333;
-  color: #fff;
-  padding: 20px;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  max-width: 400px;
-  margin: 0 auto;
-}
-
 
 .fade-in {
   opacity: 0;
@@ -214,6 +32,69 @@ footer {
 .fade-in.visible {
   opacity: 1;
   transform: translateY(0);
+}
+
+.button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #333;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background-color 0.3s ease-out;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: #555;
+}
+
+/* =========================================
+   3. FEJLÉC ÉS NAVIGÁCIÓ
+   ========================================= */
+header {
+  background-color: #212121;
+  color: #fff;
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between; /* Logo balra, nav jobbra */
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 9999;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.5);
+}
+
+.logo img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  animation: rotate 4s linear infinite;
+}
+
+nav ul {
+  list-style-type: none;
+  display: flex;
+  gap: 20px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* =========================================
+   4. SZEKCIÓK ÉS TARTALOM
+   ========================================= */
+section {
+  padding: 100px 50px 50px; /* Felül több hely kell a fixed header miatt */
+}
+
+h1, h2, h3 {
+  margin-bottom: 20px;
 }
 
 .section-title {
@@ -231,56 +112,14 @@ footer {
   background-color: #fff;
 }
 
-.section-title::before {
-  content: '';
-  position: absolute;
-  bottom: -16px;
-  left: 0;
-  width: 20px;
-  height: 20px;
-  background-color: #333;
-  border-radius: 50%;
-}
-
-.button {
-  display: inline-block;
-  padding: 10px 20px;
-  background-color: #333;
-  color: #fff;
-  text-decoration: none;
-  border-radius: 4px;
-  transition: background-color 0.3s ease-out;
-}
-
-.button:hover {
-  background-color: #555;
-}
-section#home {
-  display: flex;
-  align-items: center;
-}
-
-.home-content {
-  flex: 1;
-  /*padding-right: 50px;*/
-}
-
-.portrait img {
-  width: 150px;
-  height: auto;
-  border-radius: 50%;
-}
+/* HOME SZEKCIÓ */
 #home {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 40px;
+  min-height: 600px;
   background-color: #333;
-  color: #fff;
-}
-
-.section-big {
-  height: 600px;
+  padding: 60px;
 }
 
 .home-content {
@@ -290,42 +129,112 @@ section#home {
 
 .home-content h1 {
   font-size: 48px;
-  margin-bottom: 20px;
 }
 
 .home-content p {
   font-size: 24px;
 }
 
-header {
-  background-color: #212121;
-  color: #fff;
-  padding: 20px 0; /* Fent-lent 20px, oldalt 0 */
+.portrait img {
+  width: 150px;
+  height: auto;
+  border-radius: 50%;
+}
+
+/* PROJEKTEK */
+.project {
   display: flex;
-  justify-content: center; /* Ez teszi középre a tartalmát (a nav-ot) */
   align-items: center;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%; 
-  z-index: 9999;
-  /* TÖRÖLTEM: margin-left: -35px; -> Ez eltolta a menüt balra */
-  box-sizing: border-box; /* Biztosítja, hogy a padding ne növelje a szélességet */
+  margin-bottom: 20px;
 }
 
-nav {
-  /* Itt nem kell külön pozicionálás, a header flexboxa kezeli */
+.project img {
+  width: 150px;
+  height: 150px;
+  margin-right: 20px;
+  object-fit: cover;
 }
 
-nav ul {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-  display: flex; /* Egymás mellé teszi a menüpontokat */
-  gap: 20px; /* Egyenlő távolság a menüpontok között */
+.project-info {
+  flex-grow: 1;
 }
 
-nav ul li {
-  display: inline-block;
-  margin-right: 0; /* A gap-et használjuk helyette a pontosságért */
+/* =========================================
+   5. LÁBLÉC
+   ========================================= */
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 40px 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* =========================================
+   6. MOBIL NÉZET (Media Queries)
+   ========================================= */
+
+/* Tablet és Mobil (768px alatt) */
+@media (max-width: 768px) {
+  #home {
+    flex-direction: column;
+    text-align: center;
+    padding: 40px 20px;
+  }
+
+  .home-content {
+    padding-right: 0;
+    margin-bottom: 20px;
+  }
+
+  .home-content h1 {
+    font-size: 32px;
+  }
+
+  .portrait {
+    width: 100%;
+    max-width: 250px;
+  }
+
+  .project {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .project img {
+    margin-right: 0;
+    margin-bottom: 15px;
+  }
+}
+
+/* Csak Mobil (480px alatt) */
+@media (max-width: 480px) {
+  header {
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  .logo img {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 10px;
+  }
+
+  nav ul {
+    gap: 10px;
+  }
+
+  nav ul li a {
+    font-size: 14px;
+  }
+
+  .home-content h1 {
+    font-size: 24px;
+  }
+
+  .home-content p {
+    font-size: 16px;
+  }
 }
